@@ -1,0 +1,55 @@
+Phishing Website Classification Project
+
+Project Overview
+This project implements a machine learning pipeline to classify websites as legitimate or phishing.
+The system uses multiple algorithms and provides visualizations and evaluation metrics for model comparison.
+
+Folder Structure
+phishing-website-classification/
+  phishing_project.R                 - Main R script containing data preprocessing, model training, evaluation, and visualization
+  Training Dataset.arff               - Original dataset in ARFF format with 31 features
+  phishing_classification_plots.pdf  - PDF file containing all generated plots (ROC curves, pie charts, feature importance, etc.)
+  README.txt                         - Project documentation (this file)
+  libs/                              - Optional folder for additional R scripts or helper functions
+
+Features
+Data Preprocessing:
+  - Factor conversion
+  - Train-test split (80%-20%)
+  - Numeric encoding for some models
+
+Exploratory Data Analysis (EDA):
+  - Original class distribution (pie chart)
+  - Correlation heatmap of numeric features
+
+Machine Learning Models:
+  - Random Forest
+  - Decision Tree
+  - Logistic Regression
+  - k-Nearest Neighbors (kNN)
+  - Support Vector Machine (SVM)
+
+Model Evaluation:
+  - Accuracy
+  - Confusion matrix
+  - ROC curves and AUC
+  - Feature importance for Random Forest
+  - Decision tree plot
+
+Visualizations:
+  - Pie charts for predicted class distributions
+  - Bar plot for model accuracy comparison
+  - Multi-page PDF report with all plots
+
+How to Run
+1. Ensure R is installed on your system.
+2. Place phishing_project.R and Training Dataset.arff in the same folder.
+3. Open a terminal or command prompt and run:
+   Rscript phishing_project.R
+4. The script will generate evaluation metrics and plots.
+   All graphs are saved to phishing_classification_plots.pdf.
+
+Notes
+- Ensure all required R packages are installed. The script will attempt to install missing packages automatically.
+- The ARFF dataset contains factors with levels -1, 0, and 1 representing feature values.
+- Some visualizations (correlation heatmap, ROC curves, feature importance) require numeric encoding of features.
